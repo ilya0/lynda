@@ -15,7 +15,7 @@ func main() {
 	defer f.Close()
 
 	rdr := csv.NewReader(f)
-	rdr.Comma = '\t'
+	rdr.Comma = '\t' //change to comma delimiter
 	rows, err := rdr.ReadAll()
 	if err != nil {
 		panic(err)
